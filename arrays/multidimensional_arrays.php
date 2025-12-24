@@ -47,4 +47,11 @@ foreach($availableRooms as $room) {
   echo "Available Room Type: " . $room["type"] . " at Price: " . $room["price"] . PHP_EOL;
 }
 
+//Array mapping to get room types with prices
+$price = array_map(function($room){
+  return $room["type"] . " costs KES " . $room["price"];
+}, $rooms);
+
+echo "Room Prices: " . implode(", ", $price) . PHP_EOL;
+
 ?>
