@@ -31,4 +31,11 @@ foreach($rooms as $index => $room) {
   echo "------------------------" . PHP_EOL;
 }
 
+//php in_array() function to check if a specific room type exists
+if (in_array("Suite", array_column($rooms, "type"))) {
+  echo "Suite room is available." . PHP_EOL;
+} else {
+  echo "Suite room is not available." . PHP_EOL;
+}
+
 ?>
