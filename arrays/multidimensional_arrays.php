@@ -13,7 +13,10 @@ $rooms = [
   ]
 ];
 
-foreach($rooms as $room) {
+$totalRooms = count($rooms);
+
+foreach($rooms as $index => $room) {
+  echo "Room " . ($index + 1) . " of " . $totalRooms . PHP_EOL;
   echo "Room Type: " . $room["type"] . PHP_EOL;
   echo "Price: " . $room["price"] . PHP_EOL;
   echo "Available: " . ($room["available"] ? "Yes" : "No") . PHP_EOL;
