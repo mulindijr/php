@@ -13,6 +13,14 @@ $rooms = [
   ]
 ];
 
+//php array_push() function to add a new room
+array_push($rooms, [
+  "type" => "Double",
+  "price" => 5000,
+  "available" => true
+]);
+
+//php count() function to get total number of rooms
 $totalRooms = count($rooms);
 
 foreach($rooms as $index => $room) {
