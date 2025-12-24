@@ -38,4 +38,13 @@ if (in_array("Suite", array_column($rooms, "type"))) {
   echo "Suite room is not available." . PHP_EOL;
 }
 
+//Array filtering to get only available rooms
+$availableRooms = array_filter($rooms, function($room) {
+  return $room["available"] === true;
+});
+
+foreach($availableRooms as $room) {
+  echo "Available Room Type: " . $room["type"] . " at Price: " . $room["price"] . PHP_EOL;
+}
+
 ?>
