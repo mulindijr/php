@@ -64,4 +64,11 @@ foreach ($rooms as $room) {
   }
 }
 
+//php null coalescing operator (??) to provide a default value 
+//It checks if the key exists and is not null; otherwise, it uses the fallback value.
+foreach ($rooms as $room) {
+  $discount = $room["discount"] ?? 0;
+  echo "Room Type: " . $room["type"] . " has discount: KES " . $discount . PHP_EOL;
+}
+
 ?>
