@@ -54,4 +54,14 @@ $price = array_map(function($room){
 
 echo "Room Prices: " . implode(", ", $price) . PHP_EOL;
 
+echo "======================" . PHP_EOL;
+
+//php isset() function to check if a specific index exists
+//isset($variable) checks if a variable exists and is not null.
+foreach ($rooms as $room) {
+  if (isset($room["price"])) {
+    echo "Room price: " . $room["price"] . PHP_EOL;
+  }
+}
+
 ?>
