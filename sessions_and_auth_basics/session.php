@@ -27,9 +27,24 @@ if (isset($_SESSION['user_id'])) {
 auth()->check(); // Check if user is authenticated
 
 // LOGOUT (DESTROYING SESSIONS)
+session_unset(); // Clears all session variables
 session_destroy(); // Ends the session and clears all session data
 
 // Laravel equivalent:
 Auth::logout(); // Logs out the user
+
+
+/*
+
+🔁 HOW THIS MAPS TO LARAVEL
+
+| PHP Concept            | Laravel Equivalent |
+| ---------------------- | ------------------ |
+| session_start()        | Session middleware |
+| $_SESSION["user_id"]   | auth()->id()       |
+| Login logic            | Auth controller    |
+| Protected page         | auth middleware    |
+| Logout                 | Auth::logout()     |
+*/
 
 ?>
